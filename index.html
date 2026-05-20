@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio - Irkham Daffa Fahrezi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 🔽 UI/UX UPGRADES -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Memuat Portofolio...</p>
+        </div>
+    </div>
+    <div id="scroll-progress"></div>
+    <!-- 🔼 END -->
 
-    <!-- Header -->
-    <header class="header" id="header">
+    <header class="header">
         <div class="container nav">
             <a href="#hero" class="nav__logo">✨ Irkham.dev</a>
-            
             <nav class="nav__menu" id="nav-menu">
+                <button class="nav__close" id="nav-close">×</button>
                 <ul class="nav__list">
                     <li><a href="#hero" class="nav__link">Beranda</a></li>
                     <li><a href="#about" class="nav__link">Tentang</a></li>
@@ -23,171 +31,131 @@
                     <li><a href="#gallery" class="nav__link">Galeri</a></li>
                     <li><a href="#contact" class="nav__link">Kontak</a></li>
                 </ul>
-                <button class="nav__close" id="nav-close">×</button>
             </nav>
-
             <div class="nav__actions">
-                <!-- Theme Toggle Button -->
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
                     <span class="theme-icon">🌙</span>
                 </button>
-                <button class="nav__toggle" id="nav-toggle">☰</button>
+                <button class="nav__toggle" id="nav-toggle" aria-label="Menu">☰</button>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero hero--parallax" id="hero">
-            <div class="container hero__content fade-in-up">
-                <span class="hero__subtitle">👋 Halo, saya</span>
-                <h1 class="hero__title">Irkham Daffa Fahrezi</h1>
-                <p class="hero__description">
+        <section id="hero" class="hero">
+            <div class="container">
+                <span class="hero__subtitle fade-in delay-1">👋 Halo, saya</span>
+                <h1 class="hero__title fade-in delay-2">Irkham Daffa Fahrezi</h1>
+                <p class="hero__description fade-in delay-3">
                     Siswa SMK yang passionate dalam pengembangan web, desain antarmuka, 
                     dan menciptakan pengalaman digital yang menarik.
                 </p>
-                <div class="hero__buttons">
+                <div class="hero__buttons fade-in delay-3">
                     <a href="#projects" class="btn btn--primary">🚀 Lihat Karya</a>
                     <a href="#contact" class="btn btn--secondary">📩 Hubungi Saya</a>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section class="section" id="about">
+        <section id="about" class="section">
             <div class="container">
                 <h2 class="section__title fade-in-up">🧑‍ Tentang Saya</h2>
-                <div class="about__content fade-in-up delay-1">
-                    <p>
-                        Saya adalah siswa SMK dengan minat besar dalam pengembangan web dan desain antarmuka pengguna. 
-                        Saya percaya bahwa teknologi yang baik harus mudah digunakan, indah dilihat, dan memberikan nilai nyata. 
-                        Selalu antusias mempelajari hal baru dan mengubah ide menjadi kenyataan melalui kode.
-                    </p>
+                <div class="about__content fade-in-up">
+                    <p>Saya adalah siswa SMK dengan minat besar dalam pengembangan web dan desain antarmuka pengguna. Saya percaya bahwa teknologi yang baik harus mudah digunakan, indah dilihat, dan memberikan nilai nyata. Selalu antusias mempelajari hal baru dan mengubah ide menjadi kenyataan melalui kode.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="section" id="skills">
+        <section id="skills" class="section">
             <div class="container">
                 <h2 class="section__title fade-in-up">🛠️ Keahlian</h2>
-                <div class="skills__grid fade-in-up delay-1">
-                    <div class="skill-card">HTML5</div>
-                    <div class="skill-card">CSS3</div>
-                    <div class="skill-card">JavaScript</div>
-                    <div class="skill-card">Python</div>
-                    <div class="skill-card">UI/UX Design</div>
-                    <div class="skill-card">Git & GitHub</div>
-                    <div class="skill-card">Responsive Design</div>
-                    <div class="skill-card">Problem Solving</div>
+                <div class="skills__grid">
+                    <div class="skill-card fade-in-up">HTML5</div>
+                    <div class="skill-card fade-in-up">CSS3</div>
+                    <div class="skill-card fade-in-up">JavaScript</div>
+                    <div class="skill-card fade-in-up">Python</div>
+                    <div class="skill-card fade-in-up">UI/UX Design</div>
+                    <div class="skill-card fade-in-up">Git & GitHub</div>
+                    <div class="skill-card fade-in-up">Responsive Design</div>
+                    <div class="skill-card fade-in-up">Problem Solving</div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section class="section" id="projects">
+        <section id="projects" class="section">
             <div class="container">
                 <h2 class="section__title fade-in-up">🎯 Proyek Pilihan</h2>
                 <div class="projects__grid">
-                    
-                    <!-- Project 1: Mafia Game -->
-                    <div class="project-card fade-in-up">
-                        <div class="project-card__image" style="background-image: url('assets/foto-mafia.png');"></div>
+                    <article class="project-card fade-in-up">
+                        <div class="project-card__image" style="background-image: url('assets/foto-mafia.jpg');"></div>
                         <h3 class="project-card__title">🎭 Mafia Game</h3>
                         <p>Game sosial berbasis web dengan mekanik strategi, deduksi, dan interaksi multiplayer yang dinamis.</p>
                         <div class="project-card__tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://ikanbunterl.github.io/Mafia_game-/" class="project-card__link" target="_blank">
-                                ▶️ Mainkan Sekarang →
-                            </a>
-                            <a href="https://github.com/ikanbunterl/Mafia_game-" class="project-card__link github-link" target="_blank">
-                                🐙 Source Code
-                            </a>
+                            <a href="https://ikanbunterl.github.io/Mafia_game-/" class="project-card__link" target="_blank">▶️ Mainkan Sekarang →</a>
+                            <a href="https://github.com/ikanbunterl/Mafia_game-" class="project-card__link github-link" target="_blank">🐙 Source Code</a>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Project 2: Jadwal Pelajaran -->
-                    <div class="project-card fade-in-up delay-1">
-                        <div class="project-card__image" style="background-image: url('assets/foto-pelajaran.png');"></div>
+                    <article class="project-card fade-in-up">
+                        <div class="project-card__image" style="background-image: url('assets/foto-pelajaran.jpg');"></div>
                         <h3 class="project-card__title">📅 Jadwal Pelajaran</h3>
                         <p>Tools interaktif untuk mengelola dan menampilkan jadwal pelajaran siswa dengan antarmuka yang bersih dan responsif.</p>
                         <div class="project-card__tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">pygetwindow</span>
-                            <span class="tag">json</span>
+                            <span class="tag">Python</span><span class="tag">pygetwindow</span><span class="tag">json</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/ikanbunterl/jadwal-pelajaran" class="project-card__link" target="_blank">
-                                🔗 Lihat di GitHub →
-                            </a>
+                            <a href="https://github.com/ikanbunterl/jadwal-pelajaran" class="project-card__link" target="_blank">🔗 Lihat di GitHub →</a>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Project 3: RNG Simulator -->
-                    <div class="project-card fade-in-up delay-2">
-                        <div class="project-card__image" style="background-image: url('assets/foto-rng.png');"></div>
+                    <article class="project-card fade-in-up">
+                        <div class="project-card__image" style="background-image: url('assets/foto-rng.jpg');"></div>
                         <h3 class="project-card__title">🎲 RNG Simulator</h3>
                         <p>Simulator pembangkit angka acak dengan visual menarik dan opsi kustomisasi untuk berbagai kebutuhan.</p>
                         <div class="project-card__tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Random API</span>
+                            <span class="tag">HTML</span><span class="tag">JavaScript</span><span class="tag">Random API</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://ikanbunterl.github.io/RNG_SIMULATOR/" class="project-card__link" target="_blank">
-                                ▶️ Coba Simulator →
-                            </a>
-                            <a href="https://github.com/ikanbunterl/RNG_SIMULATOR" class="project-card__link github-link" target="_blank">
-                                🐙 Source Code
-                            </a>
+                            <a href="https://ikanbunterl.github.io/RNG_SIMULATOR/" class="project-card__link" target="_blank">▶️ Coba Simulator →</a>
+                            <a href="https://github.com/ikanbunterl/RNG_SIMULATOR" class="project-card__link github-link" target="_blank">🐙 Source Code</a>
                         </div>
-                    </div>
-
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Gallery Section (Bento Grid) -->
-        <section class="section" id="gallery">
+        <section id="gallery" class="section">
             <div class="container">
                 <h2 class="section__title fade-in-up">📸 Momen & Perjalanan</h2>
-                <div class="bento-grid fade-in-up delay-1">
-                    <!-- Item 1: Besar (Ice Cream) -->
-                    <div class="bento-item bento-large">
-                        <img src="assets/foto-icecream.jpg" alt="Ice Cream" class="bento-img">
+                <div class="bento-grid">
+                    <div class="bento-item bento-large fade-in-up">
+                        <img src="assets/foto-beach.jpg" alt="Good Times" class="bento-img" loading="lazy">
                         <div class="bento-overlay"><span>Good Times ✨</span></div>
                     </div>
-                    <!-- Item 2: Kecil (Group Cafe) -->
-                    <div class="bento-item">
-                        <img src="assets/foto-group-cafe.jpg" alt="Group Cafe" class="bento-img">
+                    <div class="bento-item fade-in-up">
+                        <img src="assets/foto-group-cafe.jpg" alt="Family Time" class="bento-img" loading="lazy">
                         <div class="bento-overlay"><span>Family Time 🍦</span></div>
                     </div>
-                    <!-- Item 3: Kecil (Cathedral) -->
-                    <div class="bento-item">
-                        <img src="assets/foto-cathedral.jpg" alt="Cathedral" class="bento-img">
+                    <div class="bento-item fade-in-up">
+                        <img src="assets/foto-cathedral.jpg" alt="Adventure" class="bento-img" loading="lazy">
                         <div class="bento-overlay"><span>Adventure 🌟</span></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="section" id="contact">
+        <section id="contact" class="section">
             <div class="container">
                 <h2 class="section__title fade-in-up">📬 Hubungi Saya</h2>
-                <div class="contact__content fade-in-up delay-1">
-                    <p>
-                        Tertarik berkolaborasi, punya pertanyaan, atau sekadar ingin menyapa? 
-                        Saya selalu terbuka untuk diskusi!
-                    </p>
+                <div class="contact__content fade-in-up">
+                    <p>Tertarik berkolaborasi, punya pertanyaan, atau sekadar ingin menyapa? Saya selalu terbuka untuk diskusi!</p>
                     <div class="social-links">
-                        <a href="mailto:email@irkhamdaffa74.com">✉️ Kirim Email</a>
-                        <a href="https://github.com/ikanbunterl" target="_blank">🐙 GitHub</a>
-                        <a href="https://www.instagram.com/someoneajahhh/" target="_blank">📷 Instagram</a>
+                        <a href="mailto:email@irkhamdaffa74.com" class="btn btn--secondary">✉️ Kirim Email</a>
+                        <a href="https://github.com/ikanbunterl" target="_blank" class="btn btn--secondary">🐙 GitHub</a>
+                        <a href="https://www.instagram.com/someoneajahhh/" target="_blank" class="btn btn--secondary">📷 Instagram</a>
                     </div>
                 </div>
             </div>
@@ -195,16 +163,21 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; <span id="year"></span> Irkham Daffa Fahrezi. Dibuat dengan ❤️ dan ☕.</p>
-        <p>🚀 Terus belajar, terus berkarya.</p>
+        <div class="container">
+            <p>© <span id="year"></span> Irkham Daffa Fahrezi. Dibuat dengan ❤️ dan ☕.</p>
+            <p>🚀 Terus belajar, terus berkarya.</p>
+        </div>
     </footer>
 
-    <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-        <div id="lightbox-caption"></div>
+        <span class="lightbox-close">×</span>
+        <img id="lightbox-img" class="lightbox-content" src="" alt="">
+        <p id="lightbox-caption"></p>
     </div>
+
+    <!-- 🔽 UI/UX UPGRADES -->
+    <button id="back-to-top" aria-label="Kembali ke atas">↑</button>
+    <!-- 🔼 END -->
 
     <script src="script.js"></script>
 </body>
